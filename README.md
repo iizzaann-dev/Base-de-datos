@@ -1,6 +1,6 @@
 <h1 align="center">¡Buenas! 👋 Aquí Izan</h1>
-<h3 align="center">Alumno del instituto IES Playamar</h3>
-<h5 align="center">Aquí iré subiendo todas las prácticas que haga en la asignatura de Programación</h5>
+<h3 align="center">Alumno del IES Playamar</h3>
+<h5 align="center">Aquí iré subiendo todas las prácticas que haga en la asignatura de Lenguaje de Marcas</h5>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=iizzaann-dev&label=Profile%20views&color=0e75b6&style=flat" alt="iizzaann-dev" /> </p>
 
