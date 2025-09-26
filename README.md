@@ -1,4 +1,4 @@
-<h1 align="center">¡Buenas! 👋 aquí Izan</h1>
+<h1 align="center">¡Buenas! 👋 Aquí Izan</h1>
 <h3 align="center">Actual Alumno del instituto IES Playamar</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=iizzaann-dev&label=Profile%20views&color=0e75b6&style=flat" alt="iizzaann-dev" /> </p>
