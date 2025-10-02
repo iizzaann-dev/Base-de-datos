@@ -10,7 +10,7 @@
 
 - 🌱 Quiero estudiar en el futuro: **Desarrollo de Aplicaciones Multiplataforma**
 
-- 👯 Quizás estudie: **Ingeniería informática**
+- 👯 Quizás estudie: **Ingeniería de Software**
 
 - 📫 Puedes contactar conmigo mediante: **iricbla2402@g.educaand.es**
 
