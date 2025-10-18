@@ -38,7 +38,8 @@
 ### Repository Stats ⚙️
 <p align="center">
 <a href="https://github.com/iizzaann-dev/Base-de-datos">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=iizzaann-dev&repo=Base-de-datos&theme=radical" alt="Base-de-datos repo" />
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=iizzaann-dev&repo=Base-de-datos&theme=radical&cache_seconds=60" alt="Base-de-datos repo" />
+
 </a>
 <br>
 <img src="https://img.shields.io/github/last-commit/iizzaann-dev/Base-de-datos?style=for-the-badge&color=ff69b4" alt="Last Commit" />
