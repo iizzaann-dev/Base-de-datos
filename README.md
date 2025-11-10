@@ -1,24 +1,75 @@
-<h1 align="center">¡Buenas! 👋 Aquí Izan</h1>
-<h3 align="center">Alumno del IES Playamar</h3>
-<h5 align="center">Aquí iré subiendo todas las prácticas que haga en la asignatura de Base de Datos</h5>
+<h1 align="center">Hi! 👋 I'm Izan</h1>
+<h3 align="center">Database Explorer | SQL Padawan | Future Data Wizard 🧙‍♂️</h3>
+<h5 align="center">Here I will upload all my Database projects. Warning: excessive normalization may occur 🧩</h5>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=iizzaann-dev&label=Profile%20views&color=0e75b6&style=flat" alt="iizzaann-dev" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=iizzaann-dev" alt="iizzaann-dev" /></a> </p>
 
-- 🔭 Actualmente estoy estudiando **Desarrollo de Aplicaciones Web**
-
-- 🌱 Quiero estudiar en el futuro: **Desarrollo de Aplicaciones Multiplataforma**
-
-- 👯 Quizás estudie: **Ingeniería de Software**
-
-- 📫 Puedes contactar conmigo mediante: **iricbla2402@g.educaand.es**
-
-- ⚡ Algo curioso de mi: **Me gusta programar aunque tarde tres horas en encontrar un error en el código**
-
-<h3 align="left">Connect with me: iizzaann-dev</h3>
-<p align="left">
+<p align="center"> 
+<a href="https://github.com/ryo-ma/github-profile-trophy">
+<img src="https://github-profile-trophy.vercel.app/?username=iizzaann-dev" alt="iizzaann-dev" />
+</a> 
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
+---
+
+### About Me 🧠
+- 🧩 **Learning SQL and relational databases** — currently trying to understand why NULL behaves like that 😅  
+- 💾 **MySQL enthusiast** — because someone has to keep the data safe, right?  
+- 🧠 **I love building relationships… between tables, of course**  
+- ⚡ Fun fact: **I like programming even if it takes three hours to find a bug in the code** 🐞⏳  
+
+---
+
+### Languages & Tools 🛠️
+<p align="center">
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50"/>
+</a>
+<a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noreferrer">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" alt="sql" width="50" height="50"/>
+</a>
+</p>
+
+
+
+
+---
+
+### Repository Stats ⚙️
+<p align="center">
+<a href="https://github.com/iizzaann-dev/Base-de-datos">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=iizzaann-dev&repo=Base-de-datos&theme=radical&cache_seconds=60" alt="Base-de-datos repo" />
+
+</a>
+<br>
+<img src="https://img.shields.io/github/last-commit/iizzaann-dev/Base-de-datos?style=for-the-badge&color=ff69b4" alt="Last Commit" />
+<img src="https://img.shields.io/github/languages/count/iizzaann-dev/Base-de-datos?style=for-the-badge&color=informational" alt="Languages Count" />
+<img src="https://img.shields.io/github/issues/iizzaann-dev/Base-de-datos?style=for-the-badge&color=yellow" alt="Issues" />
+<img src="https://img.shields.io/github/stars/iizzaann-dev/Base-de-datos?style=for-the-badge&color=orange" alt="Stars" />
+</p>
+
+---
+
+### Fun Nerdy Facts 🤓
+- I tried to `INSERT` humor into my life, but it said *Duplicate entry*.  
+- I once had a relationship that wasn’t **normalized** — never again.  
+- MySQL and I have a “SELECT * FROM friendship” kind of bond.  
+- I believe `DROP DATABASE life;` should not be executed accidentally. ⚠️  
+
+---
+
+### Connect with me 🌐
+<p align="center">
+<a href="mailto:iricbla2402@g.educaand.es">📧 Email</a> | 
+<a href="https://github.com/iizzaann-dev">🐱 GitHub</a>
+</p>
+
+---
+
+### Interactive Skill Badges 🎯
+<p align="center">
+<img src="https://img.shields.io/badge/SQL-Noob-blue?style=for-the-badge&logo=postgresql&logoColor=white" /> 
+<img src="https://img.shields.io/badge/MySQL-Noob-orange?style=for-the-badge&logo=mysql&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Database%20Design-Noob-green?style=for-the-badge&logo=databricks&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Query%20Optimization-Noob-purple?style=for-the-badge&logo=sqlite&logoColor=white" /> 
+</p>
