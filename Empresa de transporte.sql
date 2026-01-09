@@ -1,3 +1,4 @@
+
 drop database if exists empresa_de_transporte;
 
 create database empresa_de_transporte;
