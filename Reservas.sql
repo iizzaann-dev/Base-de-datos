@@ -94,6 +94,50 @@ select reverse('AGALAM');
 
 select sysdate();
 select now();
+
+select * from usuarios where fecha_nacimiento >='2013-01-01' and fecha_nacimiento < date_add('2013-01-01', interval 2 month) order by fecha_nacimiento;
+
+select * from usuarios where fecha_nacimiento >='2013-01-01' and fecha_nacimiento < '2013-01-01' + interval 1 year order by fecha_nacimiento;
+
+select datediff ('2022-02-23', '2022-01-01');
+
+select datediff ('2022-01-01', '2022-02-23');
+
+select '2013-01-01' - INTERVAL 12 MONTH;
+
+select date_add('2013-01-01', interval 1 year);
+
+select ciudad, count(*) N_polideportivos from polideportivos group by ciudad order by ciudad;
+
+select ciudad, count(*) as N_polideportivos from polideportivos where count(*) > 10 group by ciudad order by ciudad;
+
+select ciudad, count(*) as N_polideportivos from polideportivos group by ciudad having count(*) > 10 order by ciudad;
+select tipo, count(*) as N_pistas from pistas group by tipo order by tipo;
+
+select tipo, count(*) as N_pistas from pistas group by tipo having count(*) > 50 order by tipo;
+
+select tipo, min(precio) precio_minimo from pistas group by tipo order by min(precio), tipo limit 1;
+
+select tipo, max(precio) precio_maximo from pistas group by tipo order by max(precio) desc limit 1;
+
+-- Mostramos la información de las pistas con sus reservas
+SELECT pistas.id 'pistas_id', codigo, tipo, reservas.id 'reservas_id',
+fecha_reserva, fecha_uso, id_pista
+FROM pistas, reservas
+WHERE pistas.id = reservas.id_pista
+ORDER BY pistas.id;
+
+select id, dni, nombre, apellidos, ciudad, fecha_nacimiento, id_reserva, asiste, id_usuario 
+from usuarios , usuario_reserva where usuarios.id = usuario_reserva.id_usuario
+ order by apellidos, nombre;
+
+
+select pistas.id, codigo, tipo, precio, polideportivos.id, nombre, direccion, ciudad, extension
+from pistas inner join polideportivos
+on polideportivos.id = pistas.id_polideportivo;
+
+
+
 -- SQLINES DEMO *** ---------------------------------------
 
 --
