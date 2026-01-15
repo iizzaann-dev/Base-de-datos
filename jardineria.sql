@@ -57,6 +57,9 @@ set default role 'rol_lectura' to 'usuario_lectura_1'@'localhost', 'usuario_lect
 set default role 'rol_escritura' to 'usuario_escritura_1'@'localhost', 'usuario_escritura_2'@'localhost';
 
 
+-- Obtener la ciudad y el teléfono de las oficinas de EEUU.
+
+
 CREATE TABLE oficina (
   codigo_oficina VARCHAR(10) NOT NULL,
   ciudad VARCHAR(30) NOT NULL,
