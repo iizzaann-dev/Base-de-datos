@@ -136,7 +136,69 @@ select pistas.id, codigo, tipo, precio, polideportivos.id, nombre, direccion, ci
 from pistas inner join polideportivos
 on polideportivos.id = pistas.id_polideportivo;
 
+-- Ejercicio 2: Listar los usuarios que viven en la misma ciudad que el usuario con ID 1.
 
+select * from usuarios where ciudad = (select ciudad from usuarios where id = 1);
+
+-- Ejercicio 3: Mostrar los polideportivos situados en la misma ciudad donde se encunetra el polideportivo 'San Jose'
+select * from polideportivos where ciudad = (select ciudad from polideportivos where nombre = 'San José');
+
+-- Ejercicio 4: Obtener el codigo, tipo y precio de la pista mas cara
+select codigo, tipo, precio from  pistas where precio = (select max(precio) from pistas);
+
+-- Ejercicio 5: Mostrar los datos del usuario que realizó la primera reserva registrada (la de ID más bajo)
+select * from usuarios where id = (select id_usuario from usuario_reserva order by id_reserva asc limit 1);
+
+-- Ejercicio 6: Listar las listas del mismo tipo qeue la pista con codigo 'MUVF2634'
+select * from pistas where tipo = (select tipo from pistas where codigo = 'MUVF2634');
+
+-- Ejercicio 7: Mostrar los polideportivos que tienen pistas de tipo 'tenis'
+select * from polideportivos where id in (select id_polideportivo from pistas where tipo = 'tenis');
+
+-- Ejercicio 8: Listar usuarios cuyo ID sea mayor que alguno de los ID de usuarios de la ciudad de 'Huesca'
+select * from usuarios where id > any (select id from usuarios where ciudad = 'Huesca');
+
+-- Ejercicio 9: Seleccionar reservas cuya fecha de uso sea posterior a alguna de las fechas de revision programadas en pistas_abiertas
+select * from reservas where fecha_uso > any (select proxima_revision from pistas_abiertas);
+
+-- Ejercicio 10: Obtener la pista cuyo precio sea mayor o igual que todas las demas pistas (otra forma de sacar el maximo)
+select * from pistas where precio >= all (select precio from pistas);
+
+-- Ejercicio 11: Encontrar `pistas que sean mas caras que todas las pistas de tipo 'pin-pong'
+select * from pistas where precio > all (select distinct precio from pistas where tipo = 'ping-pong');
+
+-- Ejercicio 12: mostrar los usuarios que han asistido como invitados a alguna reserva (tabla usuario_usuario)
+select * from usuarios u where exists (select 1 from usuario_usuario uu where uu.id_amigo = u.id);
+
+-- Ejercicio 13: Listar los polideportivos que tienen al menos una pista cuyo precio por hora sea superior a 10€
+select * from polideportivos  where id  in ( select id_polideportivo from pistas where precio > 10);
+
+-- Ejercicio 14: Muestra el dni, nombre, apellidos, email y ciudad de los usarios que nunca han hecho una reserva
+select dni, nombre, apellidos, email, ciudad from usuarios where not exists (select id_reserva from usuario_reserva where id_usuario = id);
+
+select operativa from pistas_abiertas union select id from pistas; 
+
+select id from usuarios except select id_usuario from usuario_reserva;
+
+-- Obtener los ids de lois polideportivos que no tienen ninguna pista de tipo 'tenis'
+select id from polideportivos except select 
+
+
+-- Encontrar las ciudades donde vivien usuarios y donde tambien existen polideportivos registrados
+select ciudad from usuarios intersect select ciudad from polideportivos;
+
+-- Obtener los ids de pistas que estan en la tabla general de pistas y tambien marcadas expresamente como abiertas
+select id from pistas intersect select id_pista from pistas_abiertas;
+
+-- producto cartesiano
+select u.nombre, po.nombre from usuarios u cross join polideportivos po;
+
+select distinct p.tipo, po.ciudad from pistas p cross join polideportivos po;
+
+select p.codigo, p.precio, pa.proxima_revision from pistas p inner join pistas_abiertas pa on p.id = pa.id_pista;
+
+-- Listar el nombre de los polideportivos y el tipo de pistas que contienen, solo para aquellos que tienen pistas de baloncesto. 
+select po.nombre, p.tipo from polideportivos po inner join pistas p on po.id = p.id_polideportivo where p.tipo = 'baloncesto';
 
 -- SQLINES DEMO *** ---------------------------------------
 
