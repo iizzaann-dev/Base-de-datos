@@ -200,6 +200,8 @@ select p.codigo, p.precio, pa.proxima_revision from pistas p inner join pistas_a
 -- Listar el nombre de los polideportivos y el tipo de pistas que contienen, solo para aquellos que tienen pistas de baloncesto. 
 select po.nombre, p.tipo from polideportivos po inner join pistas p on po.id = p.id_polideportivo where p.tipo = 'baloncesto';
 
+
+
 -- SQLINES DEMO *** ---------------------------------------
 
 --
