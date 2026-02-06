@@ -87,15 +87,21 @@ select nombre_cliente from cliente where codigo_cliente in (select codigo_client
 select nombre_cliente from cliente where codigo_cliente in (select codigo_cliente from pedido where codigo_pedido in (select codigo_pedido from detalle_pedido where cantidad > 200));
 
 -- 5) Obtener los clientes que residen en ciudades donde no hay oficinas.
-select nombre_cliente from cliente where linea_direccion1 not in (select linea_direccion1 from oficina where codigo_oficina);
+select * from cliente where ciudad not in (select ciudad from oficina);
 
 -- 6) Obtener el nombre, los apellidos y el email de los empleados a cargo de Alberto Soria.
--- select nombre, apellido1, apellido2, email from empleado where puesto in (
 select nombre, apellido1, apellido2, email from empleado where codigo_jefe = (select codigo_empleado from empleado where nombre = 'Alberto' and apellido1 = 'Soria');
 
 -- 7) Obtener el nombre de los clientes a los que no se les ha entregado a tiempo algún pedido.
-select nombre_clientes from cliente where codigo_cliente in (select codigo_cliente from pedido where fecha_entrega > fecha_esperada);
+select nombre_cliente from cliente where codigo_cliente in (select codigo_cliente from pedido where fecha_entrega > fecha_esperada);
 
+-- 8) 
+select nombre_cliente, telefono from cliente where codigo_cliente in (select codigo_cliente from pago where year(fecha_pago) = '2007') order by nombre_cliente;
+
+-- 9) Obtener la gama, el proveedor y la cantidad de aquellos productos cuyo estado sea pendiente
+select gama, proveedor, sum(cantidad) cantidad from producto pr inner join detalle_pedido dp on pr.codigo_producto = dp.codigo_producto 
+where dp.codigo_pedido in (select codigo_pedido from pedido where estado = 'pendiente') group by gama, proveedor
+order by gama, proveedor;
 
 
 CREATE TABLE oficina (

@@ -202,6 +202,7 @@ select po.nombre, p.tipo from polideportivos po inner join pistas p on po.id = p
 
 
 
+
 -- SQLINES DEMO *** ---------------------------------------
 
 --
