@@ -57,8 +57,28 @@ set default role 'rol_lectura' to 'usuario_lectura_1'@'localhost', 'usuario_lect
 set default role 'rol_escritura' to 'usuario_escritura_1'@'localhost', 'usuario_escritura_2'@'localhost';
 
 
--- Obtener la ciudad y el teléfono de las oficinas de EEUU.
+-- 1. Obtener la ciudad y el teléfono de las oficinas de EEUU. 
+select ciudad, telefono from oficina where pais = 'EEUU';
 
+-- 2. Obtener el cargo, nombre, apellidos e email del jefe de la empresa. 
+select puesto, nombre, apellido1, apellido2, email from empleado order by codigo_empleado asc limit 1;
+
+-- 3. Obtener el nombre, apellidos y cargo de aquellos que no sean representantes de ventas.
+select nombre, apellido1, apellido2, puesto from empleado where puesto != 'Representante Ventas';
+
+-- 4. Obtener el número de clientes que tiene la empresa. 
+select count(*) as clientes_totales from cliente;
+
+-- 5. Obtener el nombre de los clientes españoles. 
+select nombre_cliente from cliente where pais = 'Spain';
+
+-- 6. Obtener cuántos clientes tiene la empresa en cada país. 
+select count(*) as clinetes_totales_pais from cliente group by pais;
+
+-- 7. Obtener cuántos clientes tiene la empresa en la ciudad de Madrid. 
+select count(*) as clientes_de_madrid from cliente where pais = 'madrid';
+
+-- 8. Obtener el código de empleado y el número de clientes al que atiende cada representante de ventas. 
 
 CREATE TABLE oficina (
   codigo_oficina VARCHAR(10) NOT NULL,
