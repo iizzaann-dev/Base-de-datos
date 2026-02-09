@@ -10,7 +10,7 @@ create user 'miguel'@'localhost' identified by '1234';
 create user if not exists 'miguel'@'localhost' identified by '1234';
 grant all privileges on jardineria.* to 'miguel'@'localhost';
 
-
+º
 create user 'antonio'@'localhost' identified by '1234';
 create user if not exists 'antonio'@'localhost' identified by '1234';
 grant select, insert, update, delete on jardineria.* to 'antonio'@'localhost';
