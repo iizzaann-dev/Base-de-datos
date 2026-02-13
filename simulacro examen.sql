@@ -28,8 +28,8 @@ create table asignaciones (
     id_proyecto int,
 	id_desarrollador int,
 	unique (id_desarrollador, id_proyecto),
-    foreign key (id_proyecto) references proyectos (id_proyecto),
-    foreign key (id_desarrollador) references desarrolladores (id_desarrollador),
+    constraint fk_id_proyecto foreign key (id_proyecto) references proyectos (id_proyecto),
+    constraint fk_id_desarrollador foreign key (id_desarrollador) references desarrolladores (id_desarrollador),
     rol varchar (30) not null,
     fecha_asignacion date not null
 );
@@ -48,13 +48,13 @@ create role "rol_edicion";
 grant insert, update on plataforma_proyectos.* to "rol_edicion";
 
 -- 4
-grant "rol_lectura" to "proyectos_app"@"localhost";
-grant "rol_edicion" to "proyectos_app"@"localhost";
+grant rol_lectura to "proyectos_app"@"localhost";
+grant rol_edicion to "proyectos_app"@"localhost";
 set default role "rol_lectura" to "proyectos_app"@"localhost";
 
 -- 5
 drop user if exists "proyectos_app"@"localhost";
-drop role if exists "rol_lectura", "rol_edicion";
+drop role if exists rol_lectura, rol_edicion;
 
 
 INSERT INTO desarrolladores (nombre_usuario, email_usuario, fecha_registro, nivel_experiencia)
