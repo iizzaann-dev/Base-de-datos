@@ -14,7 +14,7 @@ create table alumnos(
     fecha_nacimiento date,
     email varchar (50)
 );
-alter table alumnos modify column email varchar (50) unique;
+alter table alumnos modify column email varchar (50) unique; -- Bien pero a medias
 
 -- 2. Tabla cursos (2 puntos)
 
@@ -25,23 +25,23 @@ create table cursos (
     -- precio_mesnual decimal(2, 2) check(precio_mensual > 0 and precio_mensual < 3000)
 );
 
-ALTER TABLE cursos DROP column id_curso;
-alter table cursos modify column id_curso char (4) primary key;
+ALTER TABLE cursos DROP column id_curso;							-- Puede que me lo de como bueno
+alter table cursos modify column id_curso char (4) primary key;		-- Esta bien
 
 -- 3. Tabla matrículas (2 puntos)
 
-create table matriculas (
+create table matriculas (						-- Es la que peor esta
 	id_matricula int primary key unique,
     id_alumno int,
     foreign key (id_alumno) references alumnos (id_alumno) ON DELETE CASCADE
     ON UPDATE CASCADE,
-    id_curso int,
+    id_curso int,	-- Seria char (4)
     foreign key (id_curso) references cursos (id_curso) ON DELETE CASCADE
     ON UPDATE CASCADE,
     fecha_matricula date not null
 );
 
-ALTER TABLE matriculas ADD CONSTRAINT fk_id_curso FOREIGN KEY (id_curso) REFERENCES cursos (id_curso);
+ALTER TABLE matriculas ADD CONSTRAINT fk_id_curso FOREIGN KEY (id_curso) REFERENCES cursos (id_curso);  -- Esta bien
 
 
 -- PARTE B – GESTIÓN DE USUARIOS Y ROLES (4 puntos) 
