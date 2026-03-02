@@ -49,3 +49,55 @@ alter procedure employees.department_getList comment "Obtiene un listado de todo
 show procedure status  where Db = "employees";
 
 drop procedure employees.department_getList;
+
+
+delimiter \\
+create definer  = "root"@"localhost" procedure department_getCount ()
+comment "Obtiene el numero de departamentos"
+begin
+	declare numDepts int default 0;
+    select count(*) into numDepts from departments; 
+    select numDepts;
+end\\
+delimiter ;
+call department_getCount();
+
+
+delimiter $$
+create procedure employees.get_employees_salary_greater (in salario_min int)
+begin 
+	select * from employees.employees where salary > salario_min;
+end$$
+delimiter ;
+
+call employees.get_employees_salary_greater(10000);
+
+
+delimiter //
+create procedure employees.obtener_salario (in param_id_empleado int, out param_salario decimal(8,2))
+begin
+	select salary into param_salario
+    from employees.employees where employee_id = param_id_empleado;
+end //
+delimiter ;
+
+call employees.obtener_salario(100, @salario);
+select @salario;
+
+delimiter ºº
+create procedure aumentar_salario(inout p_salario decimal(10,2))
+begin
+	set p_salario = p_salario * 1.10;
+end ºº
+delimiter ;
+
+delimiter //
+create procedure valor (inout valor varchar(10))
+begin
+	if (valor < 0)
+    valor = "El número introducido es negativo";
+    else
+    valor = "El número introducido es posit
+    }
+end//
+delimiter ;
