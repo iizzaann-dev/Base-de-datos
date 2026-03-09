@@ -83,4 +83,19 @@ drop function mayorDe3;
 select mayorDe3(3, 1, 2);
 
 
+use employees;
+-- Crea una funcion que devuelva el nombre de un empleado a partir de su id de empleado
+delimiter &&
+create function nombreEmpleado (idEmpleado int) returns varchar (20) deterministic
+begin
+	declare contenido varchar (20);
+	select first_name from employees where idEmpleado = employee_id into contenido;
+    return contenido;
+end&&
+delimiter ;
+drop function nombreEmpleado;
+select nombreEmpleado(100);
+
+select distinct *, nombreEmpleado(manager_id) from employees.employees;
+
 
