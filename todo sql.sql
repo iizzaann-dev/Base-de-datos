@@ -128,7 +128,7 @@ ORDER BY salario DESC;
    ========================= */
 
 SELECT COUNT(*) AS total_empleados
-FROM empleados;
+FROM empleado;
 
 SELECT AVG(salario) AS salario_promedio
 FROM empleados;
@@ -138,7 +138,8 @@ FROM empleados;
 
 SELECT MIN(salario) AS salario_min
 FROM empleados;
-
+ 
+select round(avg(salario)) as pablo_julay from empleado; 
 
 /* =========================
    9. GROUP BY
@@ -152,6 +153,7 @@ SELECT departamento_id, AVG(salario)
 FROM empleados
 GROUP BY departamento_id
 HAVING AVG(salario) > 2800;
+
 
 
 /* =========================
