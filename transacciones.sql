@@ -77,4 +77,12 @@ DELIMITER ;
 
 CALL insertar_pedido_seguro(1, 129, 11679, 5, 50);
 
-CALL insertar_pedido_seguro(2, 102, 'PROD002', 10, 20);
+CALL insertar_pedido_seguro(2, 102, 'PROD002', 10, 20);	
+
+
+--  
+
+
+
+	
+    
